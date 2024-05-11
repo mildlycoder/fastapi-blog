@@ -7,7 +7,14 @@ $ cd fastapi-blog #movet to directory
 $ source venv/bin/activate #to activate the environment
 ```
 
-## Test api
+add a .env file in the directory with following key:
+
+```console
+DB_URI=YOUR_MONGO_DB_URI_GOES_HERE
+```
+
+
+## Test API
 use this command to run the api:
 ```console
 $ uvircorn server:app --reload
