@@ -1,4 +1,4 @@
-## setup
+## Setup
 
 clone this repo with by adding this command to your terminal and move to the directory:
 ```console
@@ -7,7 +7,7 @@ $ cd fastapi-blog #movet to directory
 $ source venv/bin/activate #to activate the environment
 ```
 
-## test api
+## Test API
 use this command to run the api:
 ```console
 $ uvircorn server:app --reload
