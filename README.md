@@ -7,7 +7,7 @@ $ cd fastapi-blog #movet to directory
 $ source venv/bin/activate #to activate the environment
 ```
 
-## Test API
+## Test api
 use this command to run the api:
 ```console
 $ uvircorn server:app --reload
