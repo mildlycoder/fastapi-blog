@@ -56,6 +56,20 @@ async def dislike_blog(id: str, blog: Blog):
         return {"message": f"blog not found with {id} not found"}
 
 
+@router.put("/update-content/{id}")
+async def comment(id: str, content: str, blog: Blog):
+    # Assuming `collection_name` is your MongoDB collection
+    blog = collection_name.find_one({"_id": ObjectId(id)})
+
+    if blog:  # Append the new comment
+        collection_name.update_one(
+            {"_id": ObjectId(id)}, {"$set": {"content": content}}
+        )
+        return {"message": "Content updated successfully"}
+    else:
+        return {"message": f"blog not found with {id} not found"}
+
+
 # PUT Request - comment on blog
 @router.put("/comment-blog/{id}")
 async def comment(id: str, comment: str, blog: Blog):
